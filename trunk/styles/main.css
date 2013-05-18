@@ -1,0 +1,87 @@
+
+
+html, body
+{
+	background-color:#260B01;
+	/* Color Options
+	 * #734F30
+	 * #260B01
+	 * #d9b384
+	 * #46594b
+	 * #a6977c
+	 */
+}
+
+#title{
+	font-family: 'Roboto Slab', sans-serif;
+	color:#a6977c;
+	font-size:38px;
+	text-align:center;
+	position:absolute;
+	width:400px;
+	left:50%;
+	top:20px;
+	font-weight:100;
+	margin-left:-200px;
+}
+
+#navigation{
+	position:absolute;
+	font-family: 'Roboto Slab', sans-serif;
+	font-size:18px;
+	color:#d9b384;
+	float:left;
+	top:80px;
+	left:50%;
+	width:400px;
+	margin-left:-200px;
+}
+#navigation ul{
+	position:relative;
+	left:0;
+	padding:0;
+	list-style-type: none;
+		z-index:2;
+
+}
+
+#nav-selector{
+	-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+	position:absolute;
+	border-radius:15px;
+	background-color:#CBDFFF;
+	width:90px;
+	height:40px;
+	top:10px;
+	left:-19px;
+	opacity:.4;
+}
+
+#navigation ul li{
+	display:inline-block;
+	cursor:pointer;
+	
+}
+
+#navigation ul li:not(:first-child){
+	margin-left:120px;
+}
+
+hr{
+	opacity:.4;
+}
+
+
+
+footer{
+	position:fixed;
+	bottom:10px;
+	font-size:10px;
+	font-family: 'Roboto Slab', sans-serif;
+	color:#a6977c;
+	
+}
