@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>XWord Grammer</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/books.css">
+	</head>
+	<script language="javascript" src="lib/jquery.js"> </script>
+	<script language="javascript" src="scripts/navigator.js"> </script>
+	<script language="JavaScript" src="scripts/books.js"></script>
+	<script>
+		$(function(){
+			initNav("Books");
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			setTimeout(function(){
+				$(document).scroll(function(){
+					$("#more").css("opacity", 0);
+					$("#additional-info").css("opacity", 1);
+					$("#additional-info").css("pointer-events", "");
+					
+				})
+			},1000)
+			
+		})
+
+	</script>
+	<body>
+		<div id="title">X-Word Grammar</div>
+		
+		<div id="navigation">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="books.html">Books</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+			<div id="nav-selector"></div>
+			<hr>
+		</div>
+		
+		<div id="book-list-container">
+			<ul id="book-list">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			
+		</div>
+		<div id="up" class="book-button"></div>
+		<div id="down" class="book-button"></div>
+		
+		<div id="book-container">
+			<div id="book-holder">
+				<button id="view-samples">View Sample</button>
+			</div>
+			<span id="book-title">Book Title</span>
+			<button id="add-to-cart">Add To Cart</button>
+			<span id="book-info-main">Lorem ipsum dolor sit amet, 
+			consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+			laboris nisi ut aliquip ex ea commodo consequat. 
+			Duis aute irure dolor in reprehenderit in voluptate velit esse 
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+			sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+			<span id="book-info-extra">Lorem ipsum dolor sit amet, 
+			consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+			laboris nisi ut aliquip ex ea commodo consequat. 
+			Duis aute irure dolor in reprehenderit in voluptate velit esse 
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+			sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<br>Lorem ipsum dolor sit amet, 
+			consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+			laboris nisi ut aliquip ex ea commodo consequat. 
+			Duis aute irure dolor in reprehenderit in voluptate velit esse 
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+			sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+		</div>
+		
+		<div id="cart">
+			<span id="cart-title">Your Cart:</span><br>
+			<ul id="book-cart-list">
+				<li>Book Name.... $19.99</li>
+				<li>Book Name.... $19.99</li>
+				<li>Book Name.... $19.99</li>
+			</ul>
+			<span id="checkout-total">Total: $59.97</span>
+			<button id="check-out">Check Out</button>
+		</div>
+		
+		<footer>Copyright &copy; Carolyn Nims McClellan. All rights reserved.</footer>
+	</body>
+</html>
