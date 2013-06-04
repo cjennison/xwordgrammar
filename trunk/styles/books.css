@@ -27,6 +27,11 @@
 	left:30px;
 }
 
+#view-samples:hover{
+	background-color:rgb(91, 94, 78);
+}
+
+
 
 #book-title{
 	position:absolute;
@@ -43,7 +48,6 @@
 	left:190px;
 	top:50px;
 	height:200px;
-	
 }
 
 #book-info-extra{
@@ -67,6 +71,10 @@
 	height:40px;
 	top:250px;
 	left:5px;
+}
+
+#add-to-cart:hover{
+	background-color:rgb(91, 94, 78);
 }
 
 
@@ -138,6 +146,9 @@
 	top:180px;
 	left:30px;
 	overflow:hidden;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
 }
 
 
@@ -154,10 +165,20 @@
 }
 
 #book-list li{
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
 	width:100px;
 	height:150px;
 	background:white;
 	opacity:.4;
+	cursor:pointer;
+}
+
+#book-list li:hover{
+	opacity:1;
 }
 
 #book-list li:not(:first-child){
@@ -176,9 +197,87 @@
 #up{
 	left: 114px;
 	top: 147px;
+	background:url("../images/upbtn.png");
+	background-size:100% 100%;
 }
 
 #down{
 	left: 114px;
 	top: 593px;
+	background:url("../images/downbtn.png");
+	background-size:100% 100%;
+}
+
+#page-sampler-container{
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index: 10;
+}
+
+#page-sampler-container.active{
+		opacity:1;
+
+}
+
+
+
+#page-sampler-container.inactive{
+	pointer-events:none;	
+		opacity:0;
+
+}
+
+
+#page-sampler{
+	position:absolute;
+	width:450px;
+	height:600px;
+	background:#DDC5A7;
+	top:10%;
+	left:50%;
+	margin-left:-225px;
+}
+
+#xbtn{
+	position:relative;
+	left:450px;
+	top:-50px;
+	opacity:.5;
+	cursor:pointer;
+}
+
+#xbtn:hover{
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	opacity:1;
+}
+
+#shadowbox{
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	width:100%;
+	height:100%;
+	background:#000000;
+	opacity:0;
+}
+
+#shadowbox.sb_inactive{
+	opacity:0;
+	pointer-events:none;
+}
+
+#shadowbox.sb_active{
+	opacity:.7;
 }

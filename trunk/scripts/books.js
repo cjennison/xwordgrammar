@@ -1,21 +1,30 @@
 $(function(){
 	initBookNav();
+	addSampleListener();
 });
 
 
 var upbtn,
 	downbtn;
+	
+var scroll_pos = 0;
 
 function initBookNav(){
 	upbtn = $("#up");
 	downbtn = $("#down");
 	
 	$(up).click(function(){
-		moveBookNavigator("up");
+		if(scroll_pos < 3){
+			scroll_pos++;
+			moveBookNavigator("up");
+		}
 	})
 	
 	$(down).click(function(){
-		moveBookNavigator("down");
+		if(scroll_pos >= 0){
+			scroll_pos--;
+			moveBookNavigator("down");
+		}
 	})
 }
 
@@ -31,4 +40,26 @@ function moveBookNavigator(dir){
 	if(dir == "down"){
 		$(book_list).css("top", current_pos_y + 170);
 	}
+}
+
+function addSampleListener(){
+	$("#view-samples").click(function(e){
+		$("#shadowbox").removeClass("sb_inactive");
+		$("#shadowbox").addClass("sb_active");
+		$("#page-sampler-container").removeClass("inactive");
+		$("#page-sampler-container").addClass("active");
+	})
+	$("#xbtn").click(function(e){
+		$("#shadowbox").removeClass("sb_active");
+		$("#shadowbox").addClass("sb_inactive");
+		$("#page-sampler-container").addClass("inactive");
+		$("#page-sampler-container").removeClass("active");
+	})
+	$("#shadowbox").click(function(e){
+		$("#shadowbox").removeClass("sb_active");
+		$("#shadowbox").addClass("sb_inactive");
+		$("#page-sampler-container").addClass("inactive");
+		$("#page-sampler-container").removeClass("active");
+	})
+	
 }

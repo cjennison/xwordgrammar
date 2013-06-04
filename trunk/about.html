@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>XWord Grammer</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/index.css">
+		<style>
+			#about-container{
+				position:absolute;
+				top:400px;
+				font-family: 'Roboto Slab', sans-serif;
+				font-size:18px;
+				color:#DDC5A7;
+				width:80%;
+				left:10%;
+				text-align: center;
+			}
+			
+			#horiz-img{
+				position:absolute;
+				width:600px;
+				height:150px;
+				top:-200px;
+				left:50%;
+				margin-left:-300px;
+				background:#4B4E3B;
+			}
+		</style>
+	</head>
+	<script language="javascript" src="lib/jquery.js"> </script>
+	<script language="javascript" src="scripts/navigator.js"> </script>
+	<script>
+		$(function(){
+			initNav("About");
+		})
+
+	</script>
+	<body>
+		<div id="title">X-Word Grammar</div>
+		
+		<div id="navigation">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="books.html">Books</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+			<div id="nav-selector"></div>
+			<hr>
+		</div>
+		<div id="about-container">
+			<div id="horiz-img"></div>
+			<div id="about-txt">Lorem ipsum dolor sit amet, 
+			consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+			laboris nisi ut aliquip ex ea commodo consequat. 
+			Duis aute irure dolor in reprehenderit in voluptate velit esse 
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+			sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		</div>
+		
+		
+		<footer>Copyright &copy; Carolyn Nims McClellan. All rights reserved.</footer>
+	</body>
+</html>

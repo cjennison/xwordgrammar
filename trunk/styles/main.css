@@ -35,6 +35,7 @@ html, body
 	left:50%;
 	width:401px;
 	margin-left:-200px;
+	z-index:10;
 }
 #navigation ul{
 	position:relative;
