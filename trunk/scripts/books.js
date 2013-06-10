@@ -1,6 +1,15 @@
 $(function(){
+	
+	
+	$("#check-out-option #xbtn").click(function(e){
+		$("#shadowbox").removeClass("sb_active");
+		$("#shadowbox").addClass("sb_inactive");
+		$("#check-out-option").removeClass('active')
+	})
+	
 	initBookNav();
 	addSampleListener();
+	purchaseBooks();
 });
 
 
@@ -8,6 +17,42 @@ var upbtn,
 	downbtn;
 	
 var scroll_pos = 0;
+
+
+function purchaseBooks(){
+	$("#check-out").click(function(e){
+		$("#shadowbox").removeClass("sb_inactive");
+		$("#shadowbox").addClass("sb_active");
+		$("#check-out-option").addClass('active')
+	})
+	$("#order-form #xbtn").click(function(e){
+		$("#shadowbox").removeClass("sb_active");
+		$("#shadowbox").addClass("sb_inactive");
+		$("#order-form").removeClass('active')
+	})
+	$("#phone-info #xbtn").click(function(e){
+		$("#shadowbox").removeClass("sb_active");
+		$("#shadowbox").addClass("sb_inactive");
+		$("#phone-info").removeClass('active')
+	})
+	$("#shadowbox").click(function(e){
+		$("#shadowbox").removeClass("sb_active");
+		$("#shadowbox").addClass("sb_inactive");
+		$("#check-out-option").removeClass('active')
+		$("#phone-info").removeClass('active')
+		$("#order-form").removeClass('active')
+	})
+	$("#check-out-option #email").click(function(e){
+		$("#check-out-option").removeClass('active')
+		$("#order-form").addClass('active')
+	})
+	
+	$("#check-out-option #phone").click(function(e){
+		$("#check-out-option").removeClass('active')
+		$("#phone-info").addClass('active')
+	})
+	
+}
 
 function initBookNav(){
 	upbtn = $("#up");

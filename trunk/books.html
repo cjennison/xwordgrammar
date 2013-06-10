@@ -79,18 +79,107 @@
 		<div id="cart">
 			<span id="cart-title">Your Cart:</span><br>
 			<ul id="book-cart-list">
-				<li>Book Name.... $19.99</li>
-				<li>Book Name.... $19.99</li>
-				<li>Book Name.... $19.99</li>
+				<li>IC/DC/P.... $34.40</li>
+				<li>X-Word.... $38.39</li>
+				<li>Comp. Lab.... $30.42</li>
 			</ul>
 			<span id="checkout-total">Total: $59.97</span>
 			<button id="check-out">Check Out</button>
 		</div>
-		
 		<div id="page-sampler-container" class="inactive">
-			<div id="shadowbox" class="sb_inactive"> </div>
 			<div id="page-sampler"> <img id="xbtn" src="images/xbtn.png" width="50px" height="50px"></div>
 		</div>
+		<div id="shadowbox" class="sb_inactive"> </div>
+      	
+      	
+      	<div id="check-out-option"><img id="xbtn" src="images/xbtn.png" width="50px" height="50px" style="position: absolute">
+      		<span id="option-title">How would you like to check out?</span><br>
+      		<button id="phone">By Phone</button><button id="email">By Email</button>
+      	</div>
+      	
+      	<div id="phone-info"><img id="xbtn" src="images/xbtn.png" width="50px" height="50px" style="position: absolute">
+      		<span id="phone-title">Phone Ordering</span>
+      		<br>
+      		<span id="order-list">
+      			      		You want to order:
+      		<ul id="phone-cart-list">
+				<li>IC/DC/P.... $34.40</li>
+				<li>X-Word.... $38.39</li>
+				<li>Comp. Lab.... $30.42</li>
+			</ul>
+			
+			Please Call: <code>413-774-3500</code><br>
+			<p>
+			Have your credit information ready and tell the salesperson which books you want to order.
+      	</p>
+      		</span>
+      		
+      	</div>
+      	
+		<div id="order-form"><img id="xbtn" src="images/xbtn.png" width="50px" height="50px" style="position: absolute">
+			<div id="order-title">Order Form</div>
+			<form name="myemailform" method="post" action="send_form_email.php">
+						<label width="200px"><b>Name<font color="red"> *</font></b></label><br>
+						<input type="text" id="firstname" name="firstname" required style="width:150px"/>
+						<input type="text" id="lastname" name="lastname" required style="margin-left:10px;width:190px" /><br>
+						<font id="subf" size="1px">First</font><font id="subl" size="1px">Last</font><br> <br>
+						
+						
+						<label ><b>Email<font color="red"> *</font></b></label><br>
+						<input type="email" id="email_addr" name="email_addr" required style="width:350px"/>
+						<br><br>
+						
+						<label style="font-size: 20px"><b>Cart</b></label><br>
+						<textarea type="text" id="comment" name="comment" value="shoop" style="margin-top:2px;height:80px;background:none;border:none;color:#D9B384" required >Book One - $19.99 &#013Book Two - $29.99&#013Book Two - $29.99</textarea><br><br>
+						<label style="font-size: 20px"><b>Total</b></label>
+						<input type="text" value="$49.99" style="margin-left:30px;background:none;border:none;color:#D9B384" />
+						<label style="font-size: 20px"><b>Payment</b></label>
+						<br>
+						<label style="font-size:12px;margin-left:50px;">Card Number</label><span id="sec_code_txt">CVV</span><br>
+						<input type="text" id="card_num" name="card_num" required style="width: 250px;position:absolute;top:374px;"/>
+						<input type="text" id="sec_code" name="sec_code" required style="width: 50px;position:absolute;top:374px;left:300px"/>
+						<div id="credit-date">Expiration Date:
+						<select>
+							<option>01</option>
+							<option>02</option>
+							<option>03</option>
+							<option>04</option>
+							<option>05</option>
+							<option>06</option>
+							<option>07</option>
+							<option>08</option>
+							<option>09</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+						</select>
+						<select>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+							<option>22</option>
+							<option>23</option>
+							<option>24</option>
+						</select>
+						</div>
+						<!-- 
+						<ul>
+							<li><input type="radio" name="payment" checked="true"><span class="r_label">Telephone</span></input></li>
+							<li><input type="radio" name="payment" checked="true"><span class="r_label">Credit/Debit</span></input></li>
+						</ul>
+						
+						-->
+						
+						<input id="submitbtn" type="submit" value="Submit Order"> 
+					</form>
+		</div>
+		
 		<footer>Copyright &copy; Carolyn Nims McClellan. All rights reserved.</footer>
 	</body>
 </html>
