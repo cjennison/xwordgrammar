@@ -73,6 +73,19 @@
 	left:5px;
 }
 
+#book-cost{
+	position:absolute;
+	font-family: 'Roboto Slab', sans-serif;
+	color:#CCCCCC;
+	border:none;
+	font-size:20px;
+	text-align: center;
+	width:150px;
+	height:40px;
+	top:255px;
+	left:200px;
+}
+
 #add-to-cart:hover{
 	background-color:rgb(91, 94, 78);
 }
@@ -145,7 +158,7 @@
 	height:400px;
 	top:180px;
 	left:30px;
-	overflow:hidden;
+	overflow-y:scroll;
 	-moz-box-shadow: 3px 3px 4px #000;
 	-webkit-box-shadow: 3px 3px 4px #000;
 	box-shadow: 3px 3px 4px #000;

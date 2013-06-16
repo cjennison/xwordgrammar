@@ -40,22 +40,25 @@
 		
 		<div id="book-list-container">
 			<ul id="book-list">
-				<li>X-Word</li>
-				<li>IC/CD/P</li>
-				<li>Andrea in X-Word Land</li>
-				<li>McLellans 2010 Oxford Lecture</li>
+				<li data-cost="$38.39" data-title="X-Word">X-Word</li>
+				<li data-cost="$34.40" data-title="IC/DC/P">IC/CD/P</li>
+				<li data-cost="$30.42" data-title="Lab Reports">Lab Reports</li>
+				<li disabled>Andrea in X-Word Land</li>
+
 			</ul>
 			
 		</div>
+		<!--
 		<div id="up" class="book-button"></div>
 		<div id="down" class="book-button"></div>
+		-->
 		
 		<div id="book-container">
 			<div id="book-holder">
 				<button id="view-samples">View Sample</button>
 			</div>
 			<span id="book-title">Book Title</span>
-			<button id="add-to-cart">Add To Cart</button>
+			<button id="add-to-cart">Add To Cart</button> <span id="book-cost"></span>
 			<span id="book-info-main">Lorem ipsum dolor sit amet, 
 			consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
 			laboris nisi ut aliquip ex ea commodo consequat. 
@@ -79,11 +82,9 @@
 		<div id="cart">
 			<span id="cart-title">Your Cart:</span><br>
 			<ul id="book-cart-list">
-				<li>IC/DC/P.... $34.40</li>
-				<li>X-Word.... $38.39</li>
-				<li>Comp. Lab.... $30.42</li>
+				
 			</ul>
-			<span id="checkout-total">Total: $59.97</span>
+			<span id="checkout-total"></span>
 			<button id="check-out">Check Out</button>
 		</div>
 		<span id="order-information">
@@ -100,7 +101,7 @@
       	
       	<div id="check-out-option"><img id="xbtn" src="images/xbtn.png" width="50px" height="50px" style="position: absolute">
       		<span id="option-title">How would you like to check out?</span><br>
-      		<button id="phone">By Phone</button><button id="email">By Email</button>
+      		<button id="phone">By Phone</button>
       	</div>
       	
       	<div id="phone-info"><img id="xbtn" src="images/xbtn.png" width="50px" height="50px" style="position: absolute">
@@ -109,9 +110,7 @@
       		<span id="order-list">
       			      		You want to order:
       		<ul id="phone-cart-list">
-				<li>IC/DC/P.... $34.40</li>
-				<li>X-Word.... $38.39</li>
-				<li>Comp. Lab.... $30.42</li>
+				
 			</ul>
 			
 			Please Call: <code>413-774-3500</code><br>

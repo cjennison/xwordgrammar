@@ -7,9 +7,11 @@ $(function(){
 		$("#check-out-option").removeClass('active')
 	})
 	
-	initBookNav();
+	//initBookNav();
 	addSampleListener();
 	purchaseBooks();
+	addBookListener();
+	updateBook($("#book-list-container ul#book-list li")[0])
 });
 
 
@@ -18,13 +20,80 @@ var upbtn,
 	
 var scroll_pos = 0;
 
+function addBookListener(){
+	var books = $("#book-list-container ul#book-list li");
+	console.log(books);
+	for(var i = 0;i<books.length;i++){
+		console.log("ED")
+		$(books[i]).on("click", function(){
+			updateBook(this);
+		})
+		
+	}
+	
+	var add_cart = $("#add-to-cart");
+	$(add_cart).on("click", function(){
+		var curbook = {
+			title:$("#book-title").html(),
+			cost:$("#book-cost").html()
+		}
+		var li = $("<li>" + curbook.title + "..." + curbook.cost + "</li>")
+		$('#book-cart-list').append(li);
+		
+		var total = 0;
+		var cart_books = $("#book-cart-list li");
+		for(var i = 0;i < cart_books.length;i++){
+			var cost = $(cart_books[i]).html();
+			cost = cost.split("...");
+			cost = cost[1].split("$");
+			console.log(cost)
+			total += Number(cost[1]);
+		}
+		total = Math.round(total * 100) / 100
+		$("#checkout-total").html("Total: $" + total);
+		console.log(total);
+		
+		console.log(curbook);
+	});
+}
+
+function updateBook(books){
+	console.log(books);
+	$("#book-title").html($(books).attr("data-title"));
+	$("#book-cost").html($(books).attr("data-cost"))
+}
+
+
+function operatePhoneInfo(){
+	var checkout_list = $("#book-cart-list li");
+	var new_list = $("#phone-cart-list");
+	$(new_list).empty();
+
+	for(var i = 0; i < checkout_list.length;i++){
+		var li = checkout_list[i];
+		console.log(li);
+		$(new_list).append(li);
+	}
+}
+
+function repopInfo(){
+	var checkout_list = $("#book-cart-list");
+	var new_list = $("#phone-cart-list li");
+
+	for(var i = 0; i < new_list.length;i++){
+		var li = new_list[i];
+		$(checkout_list).append(li);
+	}
+}
 
 function purchaseBooks(){
 	$("#check-out").click(function(e){
 		$("#shadowbox").removeClass("sb_inactive");
 		$("#shadowbox").addClass("sb_active");
-		$("#check-out-option").addClass('active')
+		$("#phone-info").addClass('active')
+		operatePhoneInfo();
 	})
+
 	$("#order-form #xbtn").click(function(e){
 		$("#shadowbox").removeClass("sb_active");
 		$("#shadowbox").addClass("sb_inactive");
@@ -33,7 +102,8 @@ function purchaseBooks(){
 	$("#phone-info #xbtn").click(function(e){
 		$("#shadowbox").removeClass("sb_active");
 		$("#shadowbox").addClass("sb_inactive");
-		$("#phone-info").removeClass('active')
+		$("#phone-info").removeClass('active');
+		repopInfo();
 	})
 	$("#shadowbox").click(function(e){
 		$("#shadowbox").removeClass("sb_active");
