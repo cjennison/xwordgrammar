@@ -4,7 +4,7 @@
 	top:180px;
 	width:47%;
 	height:auto;
-	margin-left:-20%;
+	margin-left:-25%;
 	min-width:400px;
 }
 
@@ -48,6 +48,8 @@
 	left:190px;
 	top:50px;
 	height:200px;
+	overflow: auto;
+	overflow-x: hidden;
 }
 
 #book-info-extra{
@@ -184,9 +186,9 @@
 	-webkit-transition: all .1s ease-in-out;
 	transition: all .1s ease-in-out;
 	width:100px;
-	height:150px;
+	height:120px;
 	background:white;
-	opacity:.4;
+	opacity:.8;
 	cursor:pointer;
 }
 
@@ -243,6 +245,18 @@
 #page-sampler-container.inactive{
 	pointer-events:none;	
 		opacity:0;
+
+}
+
+#order-information{
+position:absolute;
+right: 46px;
+top: 361px;
+width: 200px;
+font-family: 'Roboto Slab', sans-serif;
+color: #DDC5A7;
+font-size: 20px;
+text-align: center;
 
 }
 
@@ -536,4 +550,26 @@ left: 89px;
 
 code{
 	color:#CCCCCC;
+}
+
+
+#extra-pubs{
+	font-family: 'Roboto Slab', sans-serif;
+	color:#A6977C;
+	position: absolute;
+	top: 590px;
+	left:32px;
+}
+
+#extra-pubs ul{
+	list-style-type:none;
+}
+
+#extra-pubs ul li{
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+#extra-pubs ul li:hover{
+	color:#AAAA7C;
 }

@@ -31,6 +31,16 @@ function addBookListener(){
 		
 	}
 	
+	var other = $("#extra-pubs ul li");
+	console.log(other);
+	for(var i = 0;i<other.length;i++){
+		console.log("ED")
+		$(other[i]).on("click", function(){
+			updateBook(this);
+		})
+		
+	}
+	
 	var add_cart = $("#add-to-cart");
 	$(add_cart).on("click", function(){
 		var curbook = {
@@ -61,6 +71,9 @@ function updateBook(books){
 	console.log(books);
 	$("#book-title").html($(books).attr("data-title"));
 	$("#book-cost").html($(books).attr("data-cost"))
+	$("#book-holder").css("background", "url(" + $(books).attr("data-img") + ")");
+	$("#book-holder").css("background-size", "100% 100%");
+	$("#book-info-main").html($(books).attr("data-short"));
 }
 
 
@@ -90,8 +103,10 @@ function purchaseBooks(){
 	$("#check-out").click(function(e){
 		$("#shadowbox").removeClass("sb_inactive");
 		$("#shadowbox").addClass("sb_active");
-		$("#phone-info").addClass('active')
-		operatePhoneInfo();
+		$("#check-out-option").addClass('active')
+
+		//$("#phone-info").addClass('active')
+		//operatePhoneInfo();
 	})
 
 	$("#order-form #xbtn").click(function(e){
@@ -120,6 +135,8 @@ function purchaseBooks(){
 	$("#check-out-option #phone").click(function(e){
 		$("#check-out-option").removeClass('active')
 		$("#phone-info").addClass('active')
+				operatePhoneInfo();
+
 	})
 	
 }
